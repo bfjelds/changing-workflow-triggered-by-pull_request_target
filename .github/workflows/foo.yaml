@@ -35,5 +35,5 @@ jobs:
           echo base repo id: ${{ github.event.pull_request.base.repo.id }}
           printenv
 
-      - name: foo-changed
+      - name: foochanged
         run: echo "changed: do stuff involving [${{ secrets.Foo }}]"
