@@ -36,4 +36,4 @@ jobs:
           printenv
 
       - name: foochanged
-        run: echo "changed: do stuff involving [${{ secrets.Foo }}]"
+        run: echo "do stuff involving [${{ secrets.Foo }}]"
