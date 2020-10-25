@@ -20,7 +20,7 @@ jobs:
         if: ${{ github.event_name != 'pull_request_target' }}
         uses: actions/checkout@v2
 
-      - debug:
+      - name: debug info
         run: |
           echo event name: ${{ github.event_name }}
           echo repo full name: ${{ github.event.pull_request.head.repo.full_name }}
