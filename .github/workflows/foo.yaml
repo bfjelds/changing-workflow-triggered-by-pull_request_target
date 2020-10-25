@@ -7,6 +7,10 @@ on:
 jobs:
   foo:
     runs-on: ubuntu-latest
+    if: >-
+      ( github.event_name == 'pull_request_target' && github.event.pull_request.head.repo.fork == 'true' ) ||
+      ( github.event_name == 'pull_request' && github.event.pull_request.head.repo.fork == 'false' ) ||
+      ( github.event_name == 'push' || github.event_name == 'workflow_dispatch' )
     steps:
       - name: Checkout the merged commit from PR and base branch
         if: github.event_name == 'pull_request_target'
