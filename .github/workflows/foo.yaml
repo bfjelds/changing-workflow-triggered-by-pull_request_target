@@ -28,6 +28,9 @@ jobs:
       - name: debug info
         run: |
           echo event name: ${{ github.event_name }}
+          echo pr base sha: ${{ github.event.pull_request.base.sha }}
+          echo pr head sha: ${{ github.event.pull_request.head.sha }}
+          echo pr merge sha: ${{ github.event.pull_request.merge.sha }}
           echo repo full name: ${{ github.event.pull_request.head.repo.full_name }}
           echo repository: ${{ github.repository }}
           echo fork: ${{ github.event.pull_request.head.repo.fork }}
