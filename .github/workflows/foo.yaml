@@ -36,6 +36,7 @@ jobs:
           echo pr base sha: ${{ github.event.pull_request.base.sha }}
           echo pr head sha: ${{ github.event.pull_request.head.sha }}
           echo pr merge sha: ${{ github.event.pull_request.merge.sha }}
+          echo git log commit head sha: $(git log -1 --format="%H")
           printenv
 
       - name: foo
