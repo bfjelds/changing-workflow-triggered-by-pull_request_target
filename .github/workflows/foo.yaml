@@ -33,6 +33,9 @@ jobs:
           echo fork: ${{ github.event.pull_request.head.repo.fork }}
           echo repo id: ${{ github.event.pull_request.head.repo.id }}
           echo base repo id: ${{ github.event.pull_request.base.repo.id }}
+          echo pr base sha: ${{ github.event.pull_request.base.sha }}
+          echo pr head sha: ${{ github.event.pull_request.head.sha }}
+          echo pr merge sha: ${{ github.event.pull_request.merge.sha }}
           printenv
 
       - name: foo
