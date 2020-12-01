@@ -39,5 +39,5 @@ jobs:
           echo git log commit head sha: $(git log -1 --format="%H")
           printenv
 
-      - name: foo
+      - name: foochanged
         run: echo "do stuff involving [${{ secrets.Foo }}]"
